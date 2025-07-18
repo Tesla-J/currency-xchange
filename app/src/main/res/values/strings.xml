@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Currency Xchange</string>
+    <string name="copy_value">Copy Converted Value</string>
 </resources>
