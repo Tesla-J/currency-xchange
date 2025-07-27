@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -15,9 +16,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.google.android.gms.ads.MobileAds
+import dev.rmarcos.currencyxchange.controller.getCurrencyList
 import dev.rmarcos.currencyxchange.mainscreen.AdBanner
 import dev.rmarcos.currencyxchange.mainscreen.ConvertedValue
+import dev.rmarcos.currencyxchange.mainscreen.CurrencySelector
 import dev.rmarcos.currencyxchange.ui.theme.CurrencyXchangeTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -63,6 +67,20 @@ fun MainScreen(modifier: Modifier = Modifier) {
             value = 0f
         ) {
             // TODO
+        }
+        Row {
+            CurrencySelector(
+                modifier = Modifier.weight(1f),
+                currencyList = getCurrencyList()
+            ) {
+                //TODO
+            }
+            CurrencySelector(
+                modifier = Modifier.weight(1f),
+                currencyList = getCurrencyList()
+            ) {
+                //TODO
+            }
         }
         Spacer(
             Modifier.weight(1f)
