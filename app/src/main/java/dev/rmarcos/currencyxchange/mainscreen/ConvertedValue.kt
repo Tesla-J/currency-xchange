@@ -26,10 +26,10 @@ import java.util.Currency
 fun ConvertedValue(
     modifier: Modifier = Modifier,
     value: Float,
-    currencyData: CurrencyData,
+    currencySymbol: String,
     onClick: (String) -> Unit,
 ) {
-    val convertedValue = "%5.2f ${currencyData.symbol}".format(value)
+    val convertedValue = "%5.2f $currencySymbol".format(value)
     Row(
         modifier = modifier
             .padding(8.dp),
@@ -62,6 +62,6 @@ fun ConvertedValue(
 fun ConvertedValuePreview() {
     ConvertedValue(
         value = 50f,
-        currencyData = CurrencyData("kWANZA", "AOA", Currency.getInstance("AOA").symbol)
+        currencySymbol = Currency.getInstance("AOA").symbol
     ){}
 }
