@@ -1,2 +1,2 @@
 # currency-xchange
-A Currency Exchanger
+An Android App Currency Exchanger
